@@ -3,20 +3,20 @@
 /**
  * check_cycle - checks if a singly linked list has a cycle
  * @list: pointer
- * Return: 0 if yes 1 if no
+ * Return: 1 if yes 0 if no
  */
 int check_cycle(listint_t *list)
 {
 listint_t *p = list;
 listint_t *q = list;
 if (list == NULL)
-return (1);
+return (0);
 while (p != NULL && q != NULL && p->next != NULL)
 {
 if (p == q)
-return (0);
+return (1);
 p = p->next->next;
 q = q->next;
 }
-return (1);
+return (0);
 }
