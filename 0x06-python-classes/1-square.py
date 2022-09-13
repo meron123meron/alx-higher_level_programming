@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
 """define a class square"""
+
+
 class square:
     
     """a class with attribute"""
