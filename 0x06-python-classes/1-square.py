@@ -4,9 +4,8 @@
 
 
 class square:
-    
-    """a class with attribute"""
 
+    """a class with attribute"""
 
     def __init__(self, size):
 
