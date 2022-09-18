@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """This is 4-print_square module"""
+
+
 def print_square(size):
     """prints a square with # symbol"""
     if type(size) is not int:
