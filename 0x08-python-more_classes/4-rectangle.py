@@ -60,6 +60,7 @@ class Rectangle:
             if i != self.__height - 1:
                 new.append("\n")
         return ("".join(new))
+
     def __repr__(self):
         """returns a string representation of the rectangle
         to recreate a new instance"""
