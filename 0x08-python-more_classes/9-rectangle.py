@@ -37,6 +37,12 @@ class Rectangle:
         to recreate a new instance"""
         return ("Rectangle({:d}, {:d})".format(self.__width, self.__height))
 
+    @classmethod
+    def square(cls, size=0):
+        """returns a new Rectangle instance with width == height == size
+        size (int): The width and height of the new Rectangle."""
+        return cls(size, size)
+
     @property
     def width(self):
         """getter"""
@@ -85,9 +91,3 @@ class Rectangle:
         if rect_1.area() >= rect_2.area():
             return rect_1
         return rect_2
-
-    @classmethod
-    def square(cls, size=0):
-        """returns a new Rectangle instance with width == height == size
-        size (int): The width and height of the new Rectangle."""
-        return (cls(size, size))
