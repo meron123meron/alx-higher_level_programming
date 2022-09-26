@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Defines a class"""
+"""
+Defines a class
+"""
 
 
 class MyList(list):
