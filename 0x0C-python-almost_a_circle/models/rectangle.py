@@ -83,3 +83,14 @@ class Rectangle(Base):
         """returns [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                  self.x, self.y, self.width, self.height)
+    def update(self, *args, **kwargs):
+        """assigns an argument to each attributes
+        """
+        order = (self.id, self.width, self.height, self.x, self.y)
+        if args is not None:
+            self.id, self.width, self.height, self.x, self.y = args\
+                    + order[len(args):len(order)]
+
+        elif kwargs:
+            for (name, value) in kwargs.items():
+                setattr(self, name, value)
