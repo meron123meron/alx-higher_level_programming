@@ -34,7 +34,7 @@ class Rectangle(Base):
     @property
     def height(self):
         """getter"""
-        return self.height
+        return self.__height
     @height.setter
     def height(self, value):
         """setter"""
@@ -67,3 +67,6 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
+    def area(self):
+        """return the area"""
+        return (self.width * self.height)
