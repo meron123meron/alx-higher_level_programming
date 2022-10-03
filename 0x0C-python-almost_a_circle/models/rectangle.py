@@ -86,10 +86,20 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """assigns an argument to each attributes
         """
-        order = (self.id, self.width, self.height, self.x, self.y)
         if args is not None:
-            self.id, self.width, self.height, self.x, self.y = args\
-                    + order[len(args):len(order)]
+            i = 0
+            for a in args:
+                if i == 0:
+                    self.id = a
+                elif i == 1:
+                    self.width = a
+                elif i == 2:
+                    self.height = a
+                elif i == 3:
+                    self.x == a
+                elif i == 4:
+                    self.y = a
+                i = i + 1
 
         elif kwargs:
             for (name, value) in kwargs.items():

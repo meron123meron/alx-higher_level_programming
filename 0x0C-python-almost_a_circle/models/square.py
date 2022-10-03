@@ -25,10 +25,18 @@ class Square(Rectangle):
             """args - assigns attributes
             kwargs - pass the variable length of keyword arguments
             """
-            order = (self.id, self.width, self.height, self.x, self.y)
             if args is not None:
+                i = 0
                 for a in args:
-                    self.id = a
+                    if i == 0:
+                        self.id = a
+                    elif i == 1:
+                        self.size = a
+                    elif i == 2:
+                        self.x = a
+                    elif i == 3:
+                        self.y = a
+                    i = i + 1
             elif kwargs:
-                for (name, value) in kwargs.items():
-                    setattr(self, name, value)
+                for (key, value) in kwargs.items():
+                    setattr(self, key, value)
