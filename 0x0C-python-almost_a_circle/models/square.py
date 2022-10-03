@@ -9,7 +9,6 @@ class Square(Rectangle):
         """initialization"""
         super().__init__(size, size, x, y, id)
 
-        
         @property
         def size(self):
             """getter"""
