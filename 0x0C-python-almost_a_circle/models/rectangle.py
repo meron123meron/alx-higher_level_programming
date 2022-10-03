@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""a class"""
+"""rectangle"""
 from models.base import Base
 
 
