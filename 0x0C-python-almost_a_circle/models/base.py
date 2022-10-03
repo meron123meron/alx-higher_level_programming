@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """base"""
 import json
-import turtle
 
 
 class Base:
@@ -17,7 +16,7 @@ class Base:
         if id is not None:
             self.id = id
         else:
-            Base.__nb_objects = Base.__nb_objects + 1
+            Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
     @staticmethod
@@ -75,25 +74,3 @@ class Base:
                     return [cls.create(**i)]
         except IOError:
             return []
-
-    @classmethod
-    def draw(cls, list_rectangles, list_squares):
-        """draw the figure
-        """
-        window = turtle.Screen()
-        pen = turtle.Pen()
-        figures = list_rectangles + list_squares
-        for fig in figures:
-            pen.up()
-            pen.goto(fig.x, fig.y)
-            pen.down()
-            pen.forward(fig.width)
-            pen.right(90)
-            pen.forward(fig.height)
-            pen.right(90)
-            pen.forward(fig.width)
-            pen.right(90)
-            pen.forward(fig.height)
-            pen.right(90)
-
-        window.exitonclick()
