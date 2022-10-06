@@ -55,7 +55,7 @@ class TestBase_instantiation(unittest.TestCase):
             print(Base(12).__nb_instances)
 
     def test_str_id(self):
-        self.assertEqual("hello", Base("hello").id
+        self.assertEqual("hello", Base("hello").id)
 
     def test_float_id(self):
         self.assertEqual(5.5, Base(5.5).id)
@@ -114,7 +114,7 @@ class TestBase_to_json_string(unittest.TestCase):
 
     def test_to_json_string_rectangle_one_dict(self):
         r = Rectangle(10, 7, 2, 8, 6)
-        self.assertTrue(len(Base.to_json_string([r.to_dictionary()])
+        self.assertTrue(len(Base.to_json_string([r.to_dictionary()])))
 
     def test_to_json_string_rectangle_two_dicts(self):
         r1 = Rectangle(2, 3, 5, 19, 2)
@@ -144,11 +144,11 @@ class TestBase_to_json_string(unittest.TestCase):
 
     def test_to_json_string_no_args(self):
         with self.assertRaises(TypeError):
-        Base.to_json_string()
+            Base.to_json_string()
 
     def test_to_json_string_more_than_one_arg(self):
         with self.assertRaises(TypeError):
-        Base.to_json_string([], 1)
+            Base.to_json_string([], 1)
 
 
 class TestBase_save_to_file(unittest.TestCase):
@@ -411,6 +411,7 @@ class TestBase_load_from_file(unittest.TestCase):
     def test_load_from_file_more_than_one_arg(self):
         with self.assertRaises(TypeError):
             Base.load_from_file([], 1)
+
 
 if __name__ == "__main__":
     unittest.main()
